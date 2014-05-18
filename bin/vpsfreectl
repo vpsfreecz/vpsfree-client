@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'vpsfree/cli'
+
+Vpsfree::Cli.run
