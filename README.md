@@ -1,12 +1,12 @@
-vpsFree
--------
-vpsFree is a Ruby CLI and client library for vpsFree.cz API.
+vpsFree-Client
+==============
+vpsFree-Client is a Ruby CLI and client library for vpsFree.cz API.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'vpsfree'
+    gem 'vpsfree-client'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install vpsfree
+    $ gem install vpsfree-client
 
 ## Usage
 ### CLI

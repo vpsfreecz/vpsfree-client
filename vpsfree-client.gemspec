@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'vpsfree/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'vpsfree'
+  spec.name          = 'vpsfree-client'
   spec.version       = Vpsfree::VERSION
   spec.authors       = ['Jakub Skokan']
   spec.email         = ['jakub.skokan@vpsfree.cz']
