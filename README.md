@@ -32,6 +32,10 @@ Or install it yourself as:
 
 #### Examples
 
+Show action parameters:
+
+    vpsfreectl vps create -h
+
 List VPS:
 
     vpsfreectl vps list -u yourlogin
