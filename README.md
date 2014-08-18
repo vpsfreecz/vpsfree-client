@@ -19,18 +19,23 @@ Or install it yourself as:
 ## Usage
 ### CLI
     $ vpsfreectl -h
-    Usage: vpsfreectl [options] <resource> <action> [objects ids] [-- [parameters]]
-        -a, --api URL                    API URL
+    Usage: haveapi-cli [options] <resource> <action> [objects ids] [-- [parameters]]
+        -u, --api URL                    API URL
+        -a, --auth METHOD                Authentication method
             --list-versions              List all available API versions
-            --list-resources VERSION     List all resource in API version
-            --list-actions VERSION       List all resources and actions in API version
+            --list-auth-methods [VERSION]
+                                         List available authentication methods
+            --list-resources [VERSION]   List all resource in API version
+            --list-actions [VERSION]     List all resources and actions in API version
         -r, --raw                        Print raw response as is
-        -u, --username USER              User name
-        -p, --password PASSWORD          Password
+        -s, --save                       Save credentials to config file for later use
         -v, --[no-]verbose               Run verbosely
         -h, --help                       Show this message
 
 #### Examples
+Authenticate using token and save it to config for later use:
+
+    vpsfreectl --auth token --save vps list
 
 Show action parameters:
 
@@ -38,30 +43,30 @@ Show action parameters:
 
 List VPS:
 
-    vpsfreectl vps list -u yourlogin
+    vpsfreectl vps list
     
 List OS templates:
 
-    vpsfreectl os_template list -u yourlogin
+    vpsfreectl os_template list
 
 Create VPS:
 
-    vpsfreectl vps create -u yourlogin -- --hostname myvps --os-template-id 26
+    vpsfreectl vps create -- --hostname myvps --os-template-id 26
 
 Delete VPS #1000:
 
-    vpsfreectl vps delete 1000 -u yourlogin
+    vpsfreectl vps delete 1000
     
 List IP addresses:
 
-    vpsfreectl vps.ip_address list -u yourlogin
+    vpsfreectl vps.ip_address list
  
 ### Client library
 ```ruby
 require 'vpsfree/client'
 
 api = Vpsfree::Client.new
-api.login('yourname', 'yourpassword')
+api.login(:basic, user: 'yourname', password: 'yourpassword')
 
 response = api.vps.index
 p response.ok?
