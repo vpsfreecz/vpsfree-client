@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'vpsfree/version'
+require 'vpsfree/client/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'vpsfree-client'
-  spec.version       = Vpsfree::VERSION
+  spec.version       = Vpsfree::Client::VERSION
   spec.authors       = ['Jakub Skokan']
   spec.email         = ['jakub.skokan@vpsfree.cz']
   spec.summary       =
