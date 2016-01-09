@@ -65,7 +65,7 @@ List IP addresses:
 ```ruby
 require 'vpsfree/client'
 
-api = Vpsfree::Client.new
+api = VpsFree::Client.new
 api.login(:basic, user: 'yourname', password: 'yourpassword')
 
 response = api.vps.index

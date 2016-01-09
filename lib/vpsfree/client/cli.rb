@@ -1,6 +1,6 @@
 require 'haveapi/cli'
 
-module Vpsfree
+module VpsFree
   module Client
     class Cli < HaveAPI::CLI::Cli
       protected

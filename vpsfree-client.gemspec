@@ -5,7 +5,7 @@ require 'vpsfree/client/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'vpsfree-client'
-  spec.version       = Vpsfree::Client::VERSION
+  spec.version       = VpsFree::Client::VERSION
   spec.authors       = ['Jakub Skokan']
   spec.email         = ['jakub.skokan@vpsfree.cz']
   spec.summary       =

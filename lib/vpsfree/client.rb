@@ -1,6 +1,6 @@
 require 'haveapi/client'
 
-module Vpsfree
+module VpsFree
   module Client
     class Client < HaveAPI::Client::Client
       def initialize(v=nil)

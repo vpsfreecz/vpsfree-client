@@ -2,4 +2,4 @@
 
 require 'vpsfree/client/cli'
 
-Vpsfree::Client::Cli.run
+VpsFree::Client::Cli.run
