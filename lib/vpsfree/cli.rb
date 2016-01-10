@@ -12,3 +12,5 @@ module VpsFree
     end
   end
 end
+
+require 'vpsfree/cli/commands/vps_remote_console'
