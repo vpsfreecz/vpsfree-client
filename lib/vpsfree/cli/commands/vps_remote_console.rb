@@ -120,7 +120,7 @@ module VpsFree::CLI::Commands
         
         unless ret[:session]
           $stdout.write(ret[:data])
-          puts "Session closed."
+          puts "\nSession closed."
           EM.stop
           next
         end
