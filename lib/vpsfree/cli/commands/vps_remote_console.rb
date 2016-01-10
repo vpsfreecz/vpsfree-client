@@ -105,7 +105,8 @@ module VpsFree::CLI::Commands
           body: {
               session: @token,
               keys: @input.buffer
-          }
+          },
+          keepalive: true
       )
 
       @input.buffer = ''
