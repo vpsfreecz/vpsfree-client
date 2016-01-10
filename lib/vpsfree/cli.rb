@@ -1,7 +1,9 @@
 require 'haveapi/cli'
 
 module VpsFree
-  module Client
+  module CLI
+    module Commands ; end
+
     class Cli < HaveAPI::CLI::Cli
       protected
       def default_url
