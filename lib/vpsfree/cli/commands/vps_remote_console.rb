@@ -80,11 +80,13 @@ module VpsFree::CLI::Commands
       state = `stty -g`
       `stty raw -echo -icanon -isig`
 
-      yield
+      pid = Process.fork do
+        yield
+      end
+
+      Process.wait(pid) 
 
       `stty #{state}`
-      puts
-      puts @msg if @msg
     end
 
     def communicate
@@ -107,7 +109,7 @@ module VpsFree::CLI::Commands
         
         unless ret[:session]
           $stdout.write(ret[:data])
-          @msg = "Session closed."
+          puts "Session closed."
           EM.stop
           next
         end
