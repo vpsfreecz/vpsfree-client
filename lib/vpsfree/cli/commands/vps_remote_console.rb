@@ -73,7 +73,7 @@ module VpsFree::CLI::Commands
           @input = EventMachine.open_keyboard(InputHandler)
 
           @http = EventMachine::HttpRequest.new(
-              "http://192.168.122.11:8000/console/feed/#{vps_id}"
+              "#{vps.node.location.remote_console_server}/console/feed/#{vps_id}"
           )
           communicate
         end
