@@ -35,6 +35,16 @@ module VpsFree::CLI::Commands
       end
     end
 
+    def options(opts)
+      @opts = {
+          rate: 0.05
+      }
+
+      opts.on('--refresh-rate MSEC', 'How often send and receive data, defaults to 50 ms') do |r|
+        @opts[:rate] = r.to_i / 1000.0
+      end
+    end
+
     def exec(args)
       if args.empty?
         puts "provide VPS ID as an argument"
@@ -87,6 +97,7 @@ module VpsFree::CLI::Commands
       Process.wait(pid) 
 
       `stty #{state}`
+      puts
     end
 
     def communicate
@@ -116,7 +127,7 @@ module VpsFree::CLI::Commands
 
         $stdout.write(ret[:data])
 
-        EM.add_timer(0.05) { communicate }
+        EM.add_timer(@opts[:rate]) { communicate }
       end
     end
   end
