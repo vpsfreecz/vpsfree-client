@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+$:.insert(0, '/home/aither/workspace/vpsfree.cz/dev1.orion/haveapi-client/lib')
+$:.insert(1, '/home/aither/workspace/vpsfree.cz/dev1.orion/vpsfree-client/lib')
 require 'vpsfree/cli'
 
 VpsFree::CLI::Cli.run

@@ -1,10 +1,10 @@
-require 'haveapi/cli'
+require 'vpsadmin/cli'
 
 module VpsFree
   module CLI
     module Commands ; end
 
-    class Cli < HaveAPI::CLI::Cli
+    class Cli < VpsAdmin::CLI::Cli
       protected
       def default_url
         'https://api.vpsfree.cz'
@@ -12,5 +12,3 @@ module VpsFree
     end
   end
 end
-
-require 'vpsfree/cli/commands/vps_remote_console'
