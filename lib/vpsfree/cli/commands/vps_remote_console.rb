@@ -2,6 +2,8 @@ require 'eventmachine'
 require 'em-http'
 require 'time'
 require 'json'
+require 'base64'
+require 'terminal-size'
 
 module VpsFree::CLI::Commands
   class VpsRemoteControl < HaveAPI::CLI::Command
@@ -91,6 +93,12 @@ module VpsFree::CLI::Commands
       `stty raw -echo -icanon -isig`
 
       pid = Process.fork do
+        @size = Terminal.size!
+        
+        Signal.trap('WINCH') do
+          @size = Terminal.size!
+        end
+
         yield
       end
 
@@ -104,7 +112,9 @@ module VpsFree::CLI::Commands
       post = @http.post(
           body: {
               session: @token,
-              keys: @input.buffer
+              keys: @input.buffer,
+              width: @size[:width],
+              height: @size[:height],
           },
           keepalive: true
       )
@@ -126,7 +136,7 @@ module VpsFree::CLI::Commands
           next
         end
 
-        $stdout.write(ret[:data])
+        $stdout.write(Base64.decode64(ret[:data]))
 
         EM.add_timer(@opts[:rate]) { communicate }
       end
