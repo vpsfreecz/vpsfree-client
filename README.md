@@ -91,7 +91,7 @@ Open remote VPS console:
 ```ruby
 require 'vpsfree/client'
 
-api = VpsFree::Client::Client.new
+api = VpsFree::Client.new
 api.login(:basic, user: 'yourname', password: 'yourpassword')
 
 response = api.vps.index
