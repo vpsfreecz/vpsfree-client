@@ -3,8 +3,8 @@ require 'haveapi/client'
 module VpsFree
   module Client
     class Client < HaveAPI::Client::Client
-      def initialize(v=nil)
-        super('https://api.vpsfree.cz', v)
+      def initialize(opts = {})
+        super('https://api.vpsfree.cz', opts)
       end
     end
   end
