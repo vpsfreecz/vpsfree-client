@@ -1,3 +1,6 @@
+* Fri May 17 2019 - version 0.11.0
+- Base on vpsadmin-client v3.0.0 pre-release
+
 * Mon Nov 27 2017 - version 0.10.0
 - Depend on vpsadmin-client v2.9.1
 
