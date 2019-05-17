@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
 
-  spec.add_runtime_dependency 'vpsadmin-client', '~> 2.9.1'
+  spec.add_runtime_dependency 'vpsadmin-client', '3.0.0.master.20190517-0.3ab5ddfe'
 end
