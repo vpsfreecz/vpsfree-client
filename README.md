@@ -18,6 +18,11 @@ Or install it yourself as:
 
     $ gem install vpsfree-client
 
+### Distributions
+
+If you are a Nix user, the `nixpkgs.vpsfree-client` is available in
+`nixos-unstable` and will become available in the next "20.09" release.
+
 ## Usage
 ### CLI
     $ vpsfreectl -h
