@@ -21,5 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
 
-  spec.add_runtime_dependency 'vpsadmin-client', '3.0.0.master.20200711-0.46adf623'
+  spec.add_runtime_dependency 'vpsadmin-client', '3.0.0.master.20211209-0.34bce62b'
 end
