@@ -33,7 +33,7 @@ If you are a Nix user, you can use `nixpkgs.vpsfree-client`.
     Usage: vpsfreectl [options] <resource> <action> [objects ids] [-- [parameters]]
         -u, --api URL                    API URL
         -a, --auth METHOD                Authentication method
-            --list-versions              List all available API versions                      
+            --list-versions              List all available API versions
             --list-auth-methods [VERSION]
                                          List available authentication methods
             --list-resources [VERSION]   List all resource in API version
@@ -51,6 +51,8 @@ If you are a Nix user, you can use `nixpkgs.vpsfree-client`.
             --utc                        Display Datetime parameters in UTC
             --localtime                  Display Datetime parameters in local timezone
             --date-format FORMAT         Display Datetime in custom format
+            --[no-]block                 Toggle action blocking mode
+            --timeout SEC                Fail when the action does not finish within the timeout
         -v, --[no-]verbose               Run verbosely
             --client-version             Show client version
             --protocol-version           Show protocol version
@@ -58,7 +60,14 @@ If you are a Nix user, you can use `nixpkgs.vpsfree-client`.
         -h, --help                       Show this message
 
     Commands:
+    action_state wait <STATE ID>         Block until the action is finished
     vps remote_console VPS_ID            Open VPS remote console
+    vps migrate_many VPS_ID...           Migrate multiple VPSes using a migration plan
+    snapshot download [SNAPSHOT_ID]      Download a snapshot as an archive or a stream
+    snapshot send SNAPSHOT_ID            Download a snapshot stream and write it on stdout
+    backup dataset [DATASET_ID] FILESYSTEM Backup dataset locally
+    backup vps [VPS_ID] FILESYSTEM       Backup VPS locally
+    ip_traffic top                       Live IP traffic monitor
 
 #### Examples
 Authenticate using token and save it to config for later use:
