@@ -1,8 +1,13 @@
 vpsFree-Client
 ==============
-vpsFree-Client is a Ruby CLI and client library for vpsFree.cz API. It is based
-on vpsadmin-client, which is in turn based on haveapi-client. Check haveapi-client
-for more extensive documentation.
+vpsFree-Client is a Ruby CLI and client library for
+[vpsFree.cz API](https://api.vpsfree.cz). It is based on
+[vpsadmin-client](https://github.com/vpsfreecz/vpsadmin/tree/master/client),
+which is in turn based on
+[haveapi-client](https://github.com/vpsfreecz/haveapi/tree/master/clients/ruby).
+
+More information about vpsFree-Client can be found at vpsFree.cz's
+[knowledge base](https://kb.vpsfree.org/manuals/vps/api).
 
 ## Installation
 
@@ -20,8 +25,7 @@ Or install it yourself as:
 
 ### Distributions
 
-If you are a Nix user, the `nixpkgs.vpsfree-client` is available in
-`nixos-unstable` and will become available in the next "20.09" release.
+If you are a Nix user, you can use `nixpkgs.vpsfree-client`.
 
 ## Usage
 ### CLI
