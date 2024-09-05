@@ -1,3 +1,6 @@
+* Thu Sep 05 2024 - version 0.19.0
+- Base on vpsadmin-client ~> 4.0
+
 * Fri Dec 29 2023 - version 0.18.0
 - Base on vpsadmin-client 3.0.0.master.20231229-0.51d41b07
 
