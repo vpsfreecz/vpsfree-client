@@ -1,3 +1,6 @@
+* Fri Jul 24 2026 - version 0.20.0
+- Base on vpsadmin-client ~> 4.2
+
 * Thu Sep 05 2024 - version 0.19.0
 - Base on vpsadmin-client ~> 4.0
 
